@@ -1,4 +1,4 @@
-# Delete-Reddit-Comments
+# Delete Reddit Comments
 
 Below is a simple script I have created that you can use to delete your comments on Reddit.
 
