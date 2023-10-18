@@ -27,5 +27,6 @@ if (document.querySelector('.Comment [aria-label="more options"]')) {
 ```
 An interval of 300ms is set to avoid potential issues with throttling. <br>
 Once the script begins to delete comments on the page, it will continue until all comments have been deleted.
+Do not close or navigate away from the 'comments' page while the comments are being deleted or else it will stop the deletion process.
 
 
