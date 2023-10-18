@@ -3,7 +3,7 @@
 Below is a simple script I have created that you can use to delete your comments on Reddit.
 
 Log in to your Reddit account and go to the `/user/[username]/comments/` page. <br>
-Open the console in your browser while on the above page, copy the below code, and paste it into the console. Press enter to execute the script.
+Open the console in your browser while on the above page, copy the below code, paste it into the console and press enter to execute the script.
 
 ```
 // check to see if a comment exists
