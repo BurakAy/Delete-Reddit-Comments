@@ -1,18 +1,19 @@
-// check to see if a comment exists
-if (document.querySelector('.Comment [aria-label="more options"]')) {
+// check if comments exist
+if (document.querySelector('shreddit-profile-comment')) {
+  const selectComment = document.querySelector("#main-content > div:nth-child(3) > article:nth-child(4) > shreddit-profile-comment > div > div.block.ml-lg.relative > shreddit-comment-action-row > shreddit-overflow-menu")
   setInterval(() => {
-    // expands the 'more options' menu represented by '...' aka 'meatball menu' for 
-    // the top most comment in the list of comments on the page.
-    document.querySelector('.Comment [aria-label="more options"]').click();
-  
-    // clicks the 'delete' button in the menu that pops up for the comment to be deleted
-    let deleteComment = document.querySelectorAll('button[role="menuitem"]')[3];
-    deleteComment.click();
-  
-    // clicks the 'delete' button in the modal that pops up to confirm deletion
-    let deleteButton = document.querySelectorAll('footer button')[1];
-    deleteButton.click();
-  }, 300);
+    // menu button for comment
+    const menuBtn = shadowRoot.querySelector("faceplate-dropdown-menu > faceplate-tracker > button")
+    selectComment.menuBtn.click()
+    
+    // delete comment option from menu
+    const deleteCommentBtn = shadowRoot.querySelector("faceplate-dropdown-menu > faceplate-menu > faceplate-tracker:nth-child(3) > li > div")
+    selectComment.deleteCommentBtn.click()
+    
+    // modal delete button to confirm
+    const deleteConfirmBtn = document.querySelector("#comment-deletion-modal").shadowRoot.querySelector("#deleteBtn")
+    deleteConfirmBtn.click()
+  }, 500);
 } else {
   console.log("No comments to delete");
 }
