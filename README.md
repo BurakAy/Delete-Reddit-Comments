@@ -26,8 +26,10 @@ if (document.querySelector('shreddit-profile-comment')) {
   console.log("No comments to delete");
 }
 ```
-An interval of 300ms is set to avoid potential issues with throttling. <br>
+An interval of 500ms is set to avoid potential issues with throttling. <br>
 Once the script begins to delete comments on the page, it will continue until all comments have been deleted. <br>
-Do not close or navigate away from the 'comments' page while the comments are being deleted or else it will stop the deletion process.
+Do not close or navigate away from the 'comments' page while the comments are being deleted or else it will stop the deletion process. <br>
+
+***Note: Reddit frequently updates the DOM so if it has been a while, the selectors in the script may need updating for it to work.***
 
 
